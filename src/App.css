@@ -1,38 +1,121 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+* {
+  margin: 0;
+  padding:0 ;
+}
+
+body {
+  height: 100vh;
+  background-color: #404040;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: black;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.header input  {
+  position: absolute;
+  left: 82%;
+  width: 200px;
+  height: 30px;
+  background-color: #404040;
+  border: none;
+  padding-left: 5px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header input:focus-visible {
+  outline: none;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header h1 {
+  font-family: "Pacifico", cursive;
+  color: white;
+  margin-bottom: 5px;
+  margin-left: 30px;
+}
+
+
+.header .right {
+  position: relative;
+  right: 20px;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.main_child {
+  flex: 1 1 calc(25% - 10px);
+  box-sizing: border-box; 
+  text-align: center;
+  display: grid;
+  justify-content:center ;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+
+.main_child img {
+  width: 300px;
+  height: 500px;
+  box-shadow: 0px 0px 14px 0px rgba(201,201,201,1);
+}
+
+.main_child h3 {
+  margin-top: 20px;
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+
+.main_child p {
+  width: 300px;
+  font-family: "Nunito", sans-serif;
+  color:#ccc;
+}
+
+.filter_menu {
+  display: flex;
+  justify-content:center;
+  position: relative;
+  top: 85px;
+}
+
+.filter_menu .button_filter {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #242424;
+  color: white;
+  transition: transform 500ms ease;
+}
+
+
+.filter_menu .button_filter:hover {
+  transform: scale(1.2);
+}
+
+.filter_menu  .clicked {
+  background-color: #000000;
 }
