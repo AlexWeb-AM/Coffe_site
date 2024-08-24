@@ -26,9 +26,12 @@ body {
   z-index: 1000;
 }
 
-.header input  {
-  position: absolute;
-  left: 82%;
+.search_div {
+  display: flex;
+}
+
+.search_div input  {
+  margin-right: 35px;
   width: 200px;
   height: 30px;
   background-color: #404040;

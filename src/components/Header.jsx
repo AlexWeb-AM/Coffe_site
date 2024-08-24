@@ -13,9 +13,12 @@ export default function Header({setFilter}) {
     return (
         <header className="header">
 
-            {click && <input type="text" placeholder="Search" onChange={handleFilterChange} />}
+            
             <h1>Coffee</h1>
-            <IoSearchSharp onClick={()=>setClick(!click)} className="right" color="white" size={32} />           
+            <div className="search_div">
+                {click && <input type="text" placeholder="Search" onChange={handleFilterChange} />}
+                <IoSearchSharp onClick={()=>setClick(!click)} className="right" color="white" size={32} />    
+            </div>       
         </header>
     )
 }
