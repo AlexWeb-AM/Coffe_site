@@ -1,5 +1,4 @@
-import { useContext, useState } from "react";
-import { MyContext } from "../context";
+import { useState } from "react";
 
 export default function Filter({ setFilter }) {
   const [clickedButtons, setClickedButtons] = useState([false, false, false, false]);
